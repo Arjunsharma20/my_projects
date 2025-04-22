@@ -1,0 +1,9 @@
+<form method="POST">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Enter email">
+    <button type="submit">Check</button>
+</form>
+
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
